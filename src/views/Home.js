@@ -11,22 +11,25 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 import downArrow from "../images/down-arrow.png";
+import homeImage from "../images/Home.jpeg";
 
 export default function Home() {
   return (
     <div>
-      <div id="main">
+      <div id="home" class="main">
         <h1>Student Fundraiser Name</h1>
-        <span>November 18th 2021 | Western Michigan University</span>
-        <div>
+        <span>
+          November 16th 2021 @ 6-9pm • Western Michigan University • In-person
+        </span>
+        <div class="buttons">
           <Button variant="contained">Sign up as a vendor</Button>
           <Button variant="contained">
             <Link to="/vendors">Check out vendors</Link>
           </Button>
-          <HashLink smooth to="/#about">
-            <img src={downArrow} alt="" />
-          </HashLink>
         </div>
+        <HashLink smooth to="/#about">
+          <img src={downArrow} alt="" />
+        </HashLink>
       </div>
 
       <div id="about">
@@ -45,7 +48,7 @@ export default function Home() {
 
       <div id="details">
         <h2>Details</h2>
-        <Accordion>
+        <Accordion disableGutters>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -58,7 +61,7 @@ export default function Home() {
             WMU flagpoles!
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion disableGutters>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -71,7 +74,7 @@ export default function Home() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion disableGutters>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -83,35 +86,21 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              When is the deadline to register as a vendor?
-            </AccordionSummary>
-            <AccordionDetails>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </AccordionDetails>
-          </Accordion>
         </Accordion>
-        <Accordion>
+        <Accordion disableGutters>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            Would the event be in-person or virtual?
+            When is the deadline to register as a vendor?
           </AccordionSummary>
           <AccordionDetails>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion disableGutters>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -124,7 +113,7 @@ export default function Home() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion disableGutters>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -137,7 +126,7 @@ export default function Home() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion disableGutters>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -156,18 +145,21 @@ export default function Home() {
       </div>
       <div id="team">
         <h2>Our Team</h2>
-        <Member name="Elaine" image="" role="Leader and Organizer" />
-        <Member name="Michaella" image="" role="Front-end Lead" />
-        <Member name="Adam" image="" role="Back-end Lead" />
-        <Member name="Jia Yu" image="" role="Front-end" />
-        <Member name="Brittney" image="" role="Front-end" />
+        <div class="members">
+          <Member name="Elaine" image="" role="Leader and Organizer" />
+          <Member name="Michaella" image="" role="Front-end Lead" />
+          <Member name="Adam" image="" role="Back-end Lead" />
+          <Member name="Kezia" image="" role="Designer" />
+          <Member name="Jia Yu" image="" role="Front-end" />
+          <Member name="Brittney" image="" role="Front-end" />
+        </div>
       </div>
       <div id="sponsors">
         <h2>Our Sponsor</h2>
         <h2>Who we're fundraising for:</h2>
       </div>
       <div id="contacts">
-        <span>Contact Us at EMAIL</span>
+        <span>Contact us at cab-culturalevents@wmich.edu!</span>
       </div>
     </div>
   );

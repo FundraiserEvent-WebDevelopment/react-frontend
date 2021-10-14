@@ -4,3 +4,62 @@ nav {
   display: flex;
   flex-direction: row;
 }
+
+h1 {
+  color: white;
+  font-size: 3.5em;
+  margin: 0.2em;
+}
+
+.members {
+  display: grid;
+  width: 70%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#home {
+  background-image: url("./images/Home.jpeg");
+}
+
+#vendor {
+  background-image: url("./images/Vendors.jpeg");
+}
+
+.main {
+  /* for the background image spanning the whole screen */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+
+  /* for the contents to be centered */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.buttons {
+  margin: 1em;
+}
+
+.buttons button {
+  margin-right: 1em;
+  background-color: #f1c500;
+  border-radius: 18px;
+}
+
+#about,
+#details,
+#vendors,
+#team,
+#sponsors {
+  width: 100vw;
+  height: 100vh;
+}
+
+#contacts {
+}
