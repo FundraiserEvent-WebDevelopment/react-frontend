@@ -63,3 +63,19 @@ h1 {
 
 #contacts {
 }
+#about {
+  margin: auto;
+  margin-top: 50vh;
+  width: 50%;
+}
+#details {
+  width: 75%;
+  margin: auto;
+  margin-top: 50vh;
+}
+#details h2 {
+  text-align: center;
+}
+#detailsbckground {
+  border-radius: 10px 10px 0 0;
+}

@@ -140,6 +140,7 @@ export default function Home() {
           </AccordionDetails>
         </Accordion>
       </div>
+      <div id="detailsbackground"></div>
       <div id="vendors">
         <h2>Participating Vendors</h2>
       </div>
