@@ -12,15 +12,17 @@ export default function App() {
     <Router>
       <div>
         <nav>
-          <HashLink smooth to="/#main">
+          <HashLink smooth to="/#home">
             Home
           </HashLink>
-          <HashLink smooth to="/#details">
-            details
+          <HashLink smooth to="/#about">
+            About
           </HashLink>
-          <HashLink to="/vendors">Vendors</HashLink>
-          <HashLink smooth to="/#team">
-            Our Team
+          <HashLink smooth to="/#details">
+            Details
+          </HashLink>
+          <HashLink smooth to="/vendors#vendors">
+            Vendors
           </HashLink>
           <HashLink smooth to="/#sponsors">
             Sponsors
