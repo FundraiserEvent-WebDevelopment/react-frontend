@@ -2,38 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-import carouselImage from "../images/carousel.jpg";
 import Carousel from "react-material-ui-carousel";
 
 import SlideCard from "./SlideCard";
 import CarouselCard from "./CarouselCard";
-
-// DATABASE SCHEMA
-// create table vendors(
-// 	id SERIAL primary KEY,
-// 	first_name VARCHAR(50) not null,
-// 	last_name VARCHAR(50) not null,
-// 	pronouns VARCHAR(50),
-// 	email VARCHAR(50) NOT NULL,
-// 	goods_type INTEGER,
-// 	description TEXT,
-// 	lower_price INTEGER,
-// 	upper_price INTEGER
-// );
-
-// for each vendor, you call for the images provided?
-
-// create table images(
-// 	id SERIAL primary Key,
-// 	vendor_id INTEGER NOT NULL,
-// 	is_profile_pic BOOLEAN,
-// 	link TEXT
-// );
 
 const style = {
   position: "absolute",
@@ -51,39 +27,19 @@ const style = {
 
 export default function VendorCard(props) {
   const [open, setOpen] = React.useState(false);
-  // const [autoPlay, setAutoPlay] = useState(false);
   const [images, setImages] = React.useState([]);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const fakeImages = [
-    { id: 1, vendor_id: 1, is_profile_pic: false, link: carouselImage },
-    { id: 1, vendor_id: 1, is_profile_pic: false, link: carouselImage },
-    { id: 1, vendor_id: 1, is_profile_pic: false, link: carouselImage },
-    { id: 1, vendor_id: 1, is_profile_pic: false, link: carouselImage },
-    { id: 1, vendor_id: 1, is_profile_pic: false, link: carouselImage },
-  ];
-
-  // ../vendor returns all vendors in the DB
-  // ../images returns all images
-  // ../vendorid/x returns the the vendor of id x
-  // ../vendorimages/x returns all images for vendor x
-
-  // const images = [props.image1, props.image2, props.image3, props.image4];
-
   useEffect(() => {
     async function getImages() {
-      // console.log("calling getVendors()");
       try {
         const response = await fetch(
           `http://localhost:8080/vendorimages/${props.id}`
         );
-        console.log(response, ">>> response");
         const json = await response.json();
-        console.log(json, ">>> json");
         setImages([...json]);
-        console.log(images, ">>> vendorImages");
       } catch (error) {
         console.log(error, "something went wrong");
       }
@@ -98,12 +54,6 @@ export default function VendorCard(props) {
         sx={{ width: 300, textTransform: "capitalize" }}
         onClick={handleOpen}
       >
-        {/* <CardMedia
-          component="img"
-          height="140"
-          image={carouselImage}
-          alt={props.first_name}
-        /> */}
         <Carousel autoPlay={false} indicators={false} class="carousel-card">
           {images.map((slide) => (
             <CarouselCard {...slide} />
