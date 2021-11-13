@@ -234,3 +234,8 @@ h1 {
   align-content: center;
   justify-content: center;
 }
+
+.about-text,
+.slide-content {
+  line-height: 1.5;
+}
