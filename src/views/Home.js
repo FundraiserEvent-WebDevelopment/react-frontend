@@ -62,7 +62,11 @@ export default function Home() {
           November 16th 2021 @ 6-9pm • Western Michigan University • In-person
         </span>
         <div class="buttons">
-          <Button variant="contained">Sign up as a vendor</Button>
+          <Button variant="contained">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSetwSQVZSXA2wXRMJSbf4jhA6awTR5ZdR6nEFXCpylhMG1zXw/viewform">
+              Sign up as a vendor
+            </a>
+          </Button>
           <Button variant="contained">
             <Link to="/vendors">Check out vendors</Link>
           </Button>
@@ -161,8 +165,10 @@ export default function Home() {
               How to register as a vendor?
             </AccordionSummary>
             <AccordionDetails>
-              Anyone who is interested to be a vendor should sign-up using this
-              Google Form link.
+              Anyone who is interested to be a vendor should sign-up using this{" "}
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSetwSQVZSXA2wXRMJSbf4jhA6awTR5ZdR6nEFXCpylhMG1zXw/viewform">
+                Google Form link.
+              </a>
             </AccordionDetails>
           </Accordion>
           <Accordion disableGutters sx={styleAccordion}>

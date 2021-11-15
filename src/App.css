@@ -239,3 +239,10 @@ h1 {
 .slide-content {
   line-height: 1.5;
 }
+
+a,
+a:active,
+a:visited,
+a:hover {
+  color: black;
+}
